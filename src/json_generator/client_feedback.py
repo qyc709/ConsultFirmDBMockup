@@ -6,7 +6,11 @@ from collections import defaultdict
 from decimal import Decimal
 from transformers import AutoTokenizer, AutoModelForCausalLM, pipeline
 import torch
+<<<<<<< HEAD
 from ..db_model import Project, engine
+=======
+from models.db_model import Project, engine
+>>>>>>> origin/main
 from config.path_config import json_path
 import re
 import random

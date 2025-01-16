@@ -3,13 +3,13 @@ faker
 random_address
 
 # Database
-SQLAlchemy
+sqlalchemy
 
 # Randomizer
 scipy
 
 # Unidecode
-Unidecode
+unidecode
 
 # Testing
 pytest

@@ -13,11 +13,9 @@ from spreadsheet_generator.indirect_cost import generate_indirect_costs
 from spreadsheet_generator.non_billable_time import generate_non_billable_time_report
 #from json_generator.client_feedback import generate_client_feedback
 
-START_YEAR = 2015
-END_YEAR = 2016
 INITIAL_CONSULTANTS = 100
 
-def main():
+def generate_initial_source_data(START_YEAR, END_YEAR):
     # Initialize DB
     create_db()
 
@@ -38,8 +36,3 @@ def main():
 
     # Generate json file
     #generate_client_feedback()
-
-
-
-if __name__ == "__main__":
-    main()

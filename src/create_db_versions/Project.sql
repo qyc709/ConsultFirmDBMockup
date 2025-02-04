@@ -2,17 +2,17 @@
 WITH 
 
 get_date AS (
-    SELECT DATE('2020-07-01', '-1 day') AS my_date
+    SELECT DATE(?, '-1 day') AS my_date
 ),
 
-HourSpent AS (
+ProjectHourSpent AS (
     SELECT d."ProjectID", SUM(cd."Hours") AS Hours
     FROM "Consultant_Deliverable" cd 
         LEFT JOIN "Deliverable" d ON cd."DeliverableID" = d."DeliverableID"
-    WHERE cd."Date" <= DATE((SELECT * FROM get_date), '+1 day')
+    WHERE cd."Date" < DATE((SELECT * FROM get_date), '+1 day')
     GROUP BY d."ProjectID"
 )
-SELECT p."ProjectID" AS "projectID",
+SELECT p."ProjectID" AS "project_tmp_id",
     p."CreatedAt" AS created_at,
     p.ClientID AS clientID, p.UnitID AS unitID, p.Name AS name, p.Type AS type, 
     p."Price" AS price, p."EstimatedBudget" AS estimated_budget, p."PlannedHours" as planned_hours, 
@@ -23,10 +23,10 @@ SELECT p."ProjectID" AS "projectID",
     CASE WHEN p."ActualStartDate" > (SELECT * FROM get_date) THEN NULL ELSE p."ActualStartDate" END AS "actual_start_date", 
     CASE WHEN p."ActualEndDate" > (SELECT * FROM get_date) THEN NULL ELSE p."ActualEndDate" END AS "actual_end_date", 
     CASE WHEN p."ActualStartDate" > (SELECT * FROM get_date) THEN 0 
-        ELSE ROUND(hs."Hours"/(p."ActualHours"/p."Progress"), 1) END AS "progress",
+        ELSE ROUND(phs."Hours"/(p."ActualHours"/p."Progress"), 1) END AS "progress",
     DATETIME((SELECT * FROM get_date)) AS "last_update"
 FROM "Project" p
-    LEFT JOIN HourSpent hs ON p."ProjectID" = hs."ProjectID"
+    LEFT JOIN ProjectHourSpent phs ON p."ProjectID" = phs."ProjectID"
 WHERE p."CreatedAt" < DATE((SELECT * FROM get_date), '+1 day')
 ORDER BY p."CreatedAt", p."ProjectID";
 

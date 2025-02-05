@@ -11,7 +11,7 @@ from database_generator.generators.payroll import generate_payroll
 from database_generator.generators.project_deliverable import generate_projects
 from spreadsheet_generator.indirect_cost import generate_indirect_costs
 from spreadsheet_generator.non_billable_time import generate_non_billable_time_report
-#from json_generator.client_feedback import generate_client_feedback
+from json_generator.client_feedback import generate_client_feedback  # 导入生成客户反馈的模块
 
 INITIAL_CONSULTANTS = 100
 

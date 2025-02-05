@@ -35,3 +35,20 @@ pandas
 # Environment
 python-dotenv
 
+# Transformers (for GPT-2)
+transformers
+
+# TensorFlow (backend for Transformers)
+tensorflow
+
+# PyTorch (alternative backend for Transformers)
+torch
+
+# Hugging Face Datasets (optional, for additional models)
+datasets
+
+# Date and Time Handling
+python-dateutil
+
+# JSON Handling
+ujson

@@ -184,11 +184,12 @@ CREATE TABLE "Payroll" (
 
 --------------------------------------------------------------------
 DROP TABLE IF EXISTS "ProjectBillingRate";
+
 CREATE TABLE "ProjectBillingRate" (
   "project_tmp_id" INTEGER, 
   "titleID" VARCHAR, 
   "rate" FLOAT,  
-  -- PRIMARY(projectID, titleID)
-  -- FOREIGN KEY("ProjectID") REFERENCES "Project" ("ProjectID"), 
+  PRIMARY(projectID, titleID)
+  FOREIGN KEY("ProjectID") REFERENCES "Project" ("ProjectID"), 
   FOREIGN KEY("titleID") REFERENCES "Title" ("titleID")
 );

@@ -6,7 +6,7 @@ SELECT *,
 DATETIME((SELECT * FROM get_date)) AS "last_update"
 FROM (
     SELECT 
-        ID AS "recordID",
+        ID,
         "consultantID",
         'T' || "titleID" AS "titleID",
         CASE WHEN "EventType" = 'Hire' OR "EventType" = 'Continuation' THEN "StartDate"

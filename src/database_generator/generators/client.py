@@ -4,7 +4,7 @@ from faker import Faker
 import random
 
 def generate_clients(num_clients):
-    print("Gnerating Client Data...")
+    # print("Gnerating Client Data...")
     Session = sessionmaker(bind=engine)
     session = Session()
 
@@ -42,5 +42,5 @@ def generate_clients(num_clients):
     session.add_all(client_data)
     session.commit()
     session.close()
-    print("Complete")
+    # print("Complete")
     

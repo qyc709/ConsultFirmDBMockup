@@ -3,6 +3,7 @@ WITH get_date AS (
     SELECT DATE(?, '-1 day') AS my_date
 )
 SELECT
+    "PayRollID" AS "ID",
     "ConsultantID" AS "consultantID",
     "Amount" AS "amount",
     "EffectiveDate" AS "payment_date"

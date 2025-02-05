@@ -48,7 +48,6 @@ CREATE TABLE "BusinessUnit" (
 DROP TABLE IF EXISTS "Project";
 CREATE TABLE "Project" (
   "projectID" TEXT PRIMARY KEY, 
-  "project_tmp_id" INTEGER,
   "created_at" DATETIME,
   "clientID" INTEGER,
   "unitID" INTEGER,
@@ -73,8 +72,7 @@ CREATE TABLE "Project" (
 DROP TABLE IF EXISTS "Deliverable";
 CREATE TABLE "Deliverable" (
   "deliverableID" TEXT PRIMARY KEY,
-  "deliverable_tmp_id" INTEGER,
-  "project_tmp_id" INTEGER, 
+  "projectID" TEXT,
   "name" VARCHAR,
   "created_at" DATETIME,
   "price" FLOAT, 
@@ -86,8 +84,8 @@ CREATE TABLE "Deliverable" (
   "progress" INTEGER, 
   "submission_date" DATE, 
   "invoiced_date" DATE,
-  "last_update" DATETIME
-  -- FOREIGN KEY("ProjectID") REFERENCES "Project" ("ProjectID")
+  "last_update" DATETIME,
+  FOREIGN KEY("ProjectID") REFERENCES "Project" ("ProjectID")
 );
 
 
@@ -134,39 +132,41 @@ DROP TABLE IF EXISTS "ConsultantDeliverable";
 CREATE TABLE "ConsultantDeliverable" (
   "recordID" TEXT PRIMARY KEY, 
   "consultantID" VARCHAR, 
-  "deliverable_tmp_id" INTEGER, 
+  "deliverableID" TEXT, 
   "date" DATE, 
   "hours" INTEGER,
   "last_update" DATETIME,
-  FOREIGN KEY("consultantID") REFERENCES "Consultant" ("consultantID")
-  -- FOREIGN KEY("DeliverableID") REFERENCES "Deliverable" ("DeliverableID")
+  FOREIGN KEY("consultantID") REFERENCES "Consultant" ("consultantID"),
+  FOREIGN KEY("deliverableID") REFERENCES "Deliverable" ("deliverableID")
 );
 
 
 --------------------------------------------------------------------
 DROP TABLE IF EXISTS "ProjectExpense";
 CREATE TABLE "ProjectExpense" (
-  "expenseRecordID" TEXT PRIMARY KEY, 
-  "project_tmp_id" INTEGER, 
-  "deliverable_tmp_id" INTEGER, 
+  "recordID" TEXT PRIMARY KEY, 
+  "projectID" TEXT, 
+  "deliverableID" TEXT,
   "date" DATE, 
   "amount" FLOAT, 
   "description" VARCHAR, 
   "category" VARCHAR, 
-  "is_billable" BOOLEAN
-  -- FOREIGN KEY("ProjectID") REFERENCES "Project" ("ProjectID"), 
-  -- FOREIGN KEY("DeliverableID") REFERENCES "Deliverable" ("DeliverableID")
+  "is_billable" BOOLEAN,
+  FOREIGN KEY("projectID") REFERENCES "Project" ("projectID"), 
+  FOREIGN KEY("deliverableID") REFERENCES "Deliverable" ("deliverableID")
 );
 
 
 --------------------------------------------------------------------
 DROP TABLE IF EXISTS "ProjectTeam";
 CREATE TABLE "ProjectTeam" (
-  "project_tmp_id" INTEGER, 
+  "projectID" INTEGER, 
   "consultantID" VARCHAR, 
   "role" VARCHAR, 
   "start_date" DATE, 
   "end_date" DATE, 
+  PRIMARY KEY(projectID, consultantID, role)
+  FOREIGN KEY("projectID") REFERENCES "Project" ("projectID"), 
   FOREIGN KEY("consultantID") REFERENCES "Consultant" ("consultantID")
 );
 
@@ -174,7 +174,7 @@ CREATE TABLE "ProjectTeam" (
 --------------------------------------------------------------------
 DROP TABLE IF EXISTS "Payroll";
 CREATE TABLE "Payroll" (
-  "payrollID" TEXT PRIMARY KEY, 
+  "recordID" TEXT PRIMARY KEY, 
   "consultantID" VARCHAR, 
   "amount" FLOAT, 
   "payment_date" DATE, 
@@ -186,10 +186,10 @@ CREATE TABLE "Payroll" (
 DROP TABLE IF EXISTS "ProjectBillingRate";
 
 CREATE TABLE "ProjectBillingRate" (
-  "project_tmp_id" INTEGER, 
+  "projectID" TEXT, 
   "titleID" VARCHAR, 
   "rate" FLOAT,  
-  PRIMARY(projectID, titleID)
+  PRIMARY KEY(projectID, titleID),
   FOREIGN KEY("ProjectID") REFERENCES "Project" ("ProjectID"), 
   FOREIGN KEY("titleID") REFERENCES "Title" ("titleID")
 );

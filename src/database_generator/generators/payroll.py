@@ -6,7 +6,7 @@ from sqlalchemy import func
 from models.db_model import Consultant, ConsultantTitleHistory, Payroll, engine
 
 def generate_payroll(end_year):
-    print("Generating Payroll Data...")
+    # print("Generating Payroll Data...")
     Session = sessionmaker(bind=engine)
     session = Session()
 
@@ -47,4 +47,4 @@ def generate_payroll(end_year):
 
     session.commit()
     session.close()
-    print("Complete")
+    # print("Complete")

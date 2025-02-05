@@ -1,5 +1,6 @@
 -- '2020-07-01'
-SELECT 
+SELECT
+    "ProjectExpenseID" AS "ID",
     "ProjectID" AS "project_tmp_id",
     "DeliverableID" AS "deliverable_tmp_id",
     "Date" AS "date",

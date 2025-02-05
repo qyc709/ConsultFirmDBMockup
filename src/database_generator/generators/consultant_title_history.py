@@ -292,7 +292,7 @@ def generate_consultant_data(session, initial_num_consultants, start_year, end_y
                         StartDate=date(year, 1, 1), EventType='Continuation', Salary=new_salary
                     ))
 
-        print(f"Year {year}: Total consultants: {len(consultant_data)}, Promotions: {promotions}, New Hires: {new_hires}")
+        # print(f"Year {year}: Total consultants: {len(consultant_data)}, Promotions: {promotions}, New Hires: {new_hires}")
 
     return consultant_data, title_history_data
 
@@ -313,8 +313,9 @@ def assign_business_units(consultant_data, session):
             assigned_count[1] += 1
 
     if unmatched_units:
-        print(f"Warning: The following unit IDs did not match any business unit: {unmatched_units}")
-        print("These consultants will be assigned to North America (unit ID 1)")
+        pass
+        # print(f"Warning: The following unit IDs did not match any business unit: {unmatched_units}")
+        # print("These consultants will be assigned to North America (unit ID 1)")
 
     return consultant_data
 
@@ -328,7 +329,7 @@ def simulate_global_expansion(consultant_data, start_year, end_year):
         for threshold, new_unit in consultant_settings.EXPANSION_THRESHOLDS.items():
             if total_consultants >= threshold and new_unit not in active_units:
                 active_units.append(new_unit)
-                print(f"Year {year}: Expanded to unit ID {new_unit}")
+                # print(f"Year {year}: Expanded to unit ID {new_unit}")
                 break
         
         new_consultants = [c for c in consultant_data if c.HireYear == year]
@@ -341,26 +342,26 @@ def simulate_global_expansion(consultant_data, start_year, end_year):
     return active_units
 
 def main(initial_num_consultants, start_year, end_year):
-    print("Generating consultant data...")
+    # print("Generating consultant data...")
     Session = sessionmaker(bind=engine)
     session = Session()
 
     try:
         consultant_data, title_history_data = generate_consultant_data(session, initial_num_consultants, start_year, end_year)
         
-        print("\nSimulating global expansion...")
+        # print("\nSimulating global expansion...")
         final_units = simulate_global_expansion(consultant_data, start_year, end_year)
-        print(f"Final active unit IDs at {end_year}: {', '.join(map(str, final_units))}")
+        # print(f"Final active unit IDs at {end_year}: {', '.join(map(str, final_units))}")
 
-        print("\nAssigning business units...")
+        # print("\nAssigning business units...")
         consultant_data = assign_business_units(consultant_data, session)
         session.add_all(consultant_data)
         session.add_all(title_history_data)
         session.commit()
     except Exception as e:
         session.rollback()
-        print(f"An error occurred while processing or inserting data: {e}")
+        # print(f"An error occurred while processing or inserting data: {e}")
     finally:
         session.close()
 
-    print("Complete")
+    # print("Complete")

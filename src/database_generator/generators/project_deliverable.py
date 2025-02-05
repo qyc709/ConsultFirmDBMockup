@@ -22,7 +22,7 @@ def generate_projects(start_year, end_year, initial_consultants):
     session = Session()
     simulation_start_date = date(start_year, 1, 1)
     simulation_end_date = date(end_year, 12, 31)
-    print("Generating Project Data...")
+    # print("Generating Project Data...")
 
     try:
         for current_year in range(start_year, end_year + 1):
@@ -62,11 +62,11 @@ def generate_projects(start_year, end_year, initial_consultants):
 
                 session.commit()
 
-            print(f"Project generation for year {current_year} completed successfully.")
+            # print(f"Project generation for year {current_year} completed successfully.")
 
     except Exception as e:
-        print(f"An error occurred while processing projects: {str(e)}")
-        print(traceback.format_exc())
+        # print(f"An error occurred while processing projects: {str(e)}")
+        # print(traceback.format_exc())
         session.rollback()
     finally:
         session.close()
@@ -326,7 +326,7 @@ def create_new_project(session, current_date, available_consultants, active_unit
         return project
     except Exception as e:
         logging.error(f"Error creating new project: {str(e)}")
-        print(traceback.format_exc())
+        # print(traceback.format_exc())
         session.rollback()
         return None
 

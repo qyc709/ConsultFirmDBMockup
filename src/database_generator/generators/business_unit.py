@@ -4,7 +4,7 @@ from models.db_model import BusinessUnit, engine
 def generate_business_units():
     Session = sessionmaker(bind=engine)
     session = Session()
-    print("Generating Business Units...")
+    # print("Generating Business Units...")
 
     business_units = [
         "North America",
@@ -19,6 +19,6 @@ def generate_business_units():
 
     session.commit()
     session.close()
-    print("Complete")
+    # print("Complete")
 
     

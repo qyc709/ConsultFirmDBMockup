@@ -2,7 +2,7 @@ from sqlalchemy.orm import sessionmaker
 from models.db_model import Location, engine
 
 def generate_locations():
-    print("Generating Location Data...")
+    # print("Generating Location Data...")
     Session = sessionmaker(bind=engine)
     session = Session()
 
@@ -55,5 +55,5 @@ def generate_locations():
 
     session.commit()
     session.close()
-    print("Complete")
+    # print("Complete")
     

@@ -1,3 +1,4 @@
+-- '2020-07-01'
 WITH 
 
 get_date AS (

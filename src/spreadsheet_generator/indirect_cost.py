@@ -105,10 +105,10 @@ def generate_indirect_costs(mean_labor_cost=125000, stddev_labor_cost=5000, mean
             other_expenses = round(other_expenses, 2)
             total_costs = labor_costs + other_expenses
 
-            data.append([month.strftime("%b-%y"), unit, labor_costs, other_expenses, total_costs])
+            data.append([month.strftime("%Y-%m"), unit, labor_costs, other_expenses, total_costs])
 
     # Create DataFrame
-    df = pd.DataFrame(data, columns=["Month", "Business Unit ID", "Non-proj Labor Costs", "Other Expense Costs", "Total Indirect Costs"])
+    df = pd.DataFrame(data, columns=["YearMonth", "Business Unit ID", "Non-proj Labor Costs", "Other Expense Costs", "Total Indirect Costs"])
 
     # Save DataFrame to Excel
     df.to_excel(indirect_costs_path, index=False)

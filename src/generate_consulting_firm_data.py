@@ -8,6 +8,7 @@ import string
 
 MONTHS_OF_A_YEAR = 12
 TABLE_NAMES = ["Location", "Client", "BusinessUnit", "Project", "Deliverable", "Consultant", "Title", "ConsultantTitleHistory", "ConsultantDeliverable", "ProjectExpense", "ProjectTeam", "Payroll", "ProjectBillingRate"]
+EXCEL_NAMES = ["indirect_costs", "non_billable_time"]
 
 project_id_mapping = pd.DataFrame({'projectID': [], 'project_tmp_id': []})
 deliverable_id_mapping = pd.DataFrame({'deliverableID': [], 'deliverable_tmp_id': []})
@@ -178,6 +179,39 @@ def generate_db_version(date, version):
         
         new_table.to_sql(table, conn_new, if_exists='append', index=False)
 
+# read excel and filter by date then save
+def filter_and_save_excel_files(date, version):
+    current_dir = os.getcwd()
+    excel_path = f'{current_dir}/example_output/spreadsheets'
+
+    date_int = int(date[:7].replace("-", ""))  # Convert 'YYYY-MM' to 'YYYYMM' for comparison
+
+    for file_base in EXCEL_NAMES:
+        original_file_path = os.path.join(excel_path, f"{file_base}.xlsx")
+
+        # Ensure the original file exists before trying to read
+        if not os.path.exists(original_file_path):
+            continue  # Skip if the file doesn't exist
+
+        # Read the Excel file
+        df = pd.read_excel(original_file_path)
+
+        # Ensure 'YearMonth' column exists
+        if 'YearMonth' in df.columns:
+            # Convert 'YearMonth' column to integer format for comparison
+            df['YearMonth'] = df['YearMonth'].astype(str).str.replace("-", "").astype(int)
+
+            # Filter rows where YearMonth < date_int
+            df_filtered = df[df['YearMonth'] < date_int]
+
+            if not df_filtered.empty:  # Only save if there are filtered rows
+                # Create new filename with version appended
+                new_filename = f"{file_base}_{version}.xlsx"
+                new_file_path = os.path.join(excel_path, new_filename)
+
+                # Save the filtered data
+                df_filtered.to_excel(new_file_path, index=False)
+
 
 """
 Generate versions of consulting firm data
@@ -202,11 +236,13 @@ def generate_consulting_firm_database(start_year, initial_no_of_months, no_of_up
     # generate initial version of database
     date = get_date_from_number(start_year, initial_no_of_months)
     generate_db_version(date, 'initial')
+    filter_and_save_excel_files(date, 'initial')
 
     # generate incremental update versions of database
     for i in range(no_of_updates):
         date = get_date_from_number(start_year, initial_no_of_months + i + 1)
         generate_db_version(date, i + 1)
+        filter_and_save_excel_files(date, i + 1)
 
 if __name__ == '__main__':
     generate_consulting_firm_database(2020, 6, 4)

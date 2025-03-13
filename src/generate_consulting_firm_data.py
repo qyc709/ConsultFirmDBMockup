@@ -20,10 +20,11 @@ payroll_id_mapping = pd.DataFrame({'recordID': [], 'ID': []})
 """
 Generate a date by incrementing the month based on the input number.
 
-:param base_year: The base year (e.g., 2020).
-:param base_month: The base month (e.g., 1 for January).
-:param number: The number to increment the month by.
-:return: A string in the format 'YYYY-MM-DD'.
+:param base_year: The base year.
+:param no_of_months: the number of months.
+
+:return: The date of the first of a month in the format 'YYYY-MM-DD'.
+(e.g. base_year = 2020, no_of_months = 1, return = '2020-02-01')
 """
 def get_date_from_number(base_year, no_of_months):
 
@@ -223,7 +224,7 @@ Generate versions of consulting firm data
 
 output: versions of 3 types consulting firm data
 """
-def generate_consulting_firm_database(start_year, initial_no_of_months, no_of_updates, intervals=1):
+def generate_consulting_firm_data(start_year, initial_no_of_months, no_of_updates, intervals=1):
     # adding update intervals, default=1
 
     # prepare the initial source data
@@ -245,4 +246,4 @@ def generate_consulting_firm_database(start_year, initial_no_of_months, no_of_up
         filter_and_save_excel_files(date, i + 1)
 
 if __name__ == '__main__':
-    generate_consulting_firm_database(2020, 6, 4)
+    generate_consulting_firm_data(2024, 6, 4)

@@ -1,30 +1,29 @@
 import json
 import random
 from datetime import datetime, timedelta
-from transformers import pipeline  # 使用 Hugging Face 的模型
+from transformers import pipeline  # using Hugging Face model
 from sqlalchemy.orm import sessionmaker
-from models.db_model import Project, engine  # 假设 Project 是你的项目模型
+from models.db_model import Project, engine 
 import os
 
-# 初始化 Hugging Face 的文本生成模型，使用更好的模型
+# initialize Hugging Face model
 text_generator = pipeline("text-generation", model="gpt2")
 
 
 def generate_text_response(prompt):
     """
-    使用 GPT-2 生成自然语言回答，确保内容在 20 到 80 字之间，并去掉标题
+    Using GPT-2 to generate natural language response and ensure it is between 20-80 words
     """
     try:
-        # 生成文本
+        # generate resonse
         response = text_generator(prompt, max_length=70, temperature=0.7)
         generated_text = response[0]['generated_text'].strip()
 
-        # 去掉标题（假设标题是 prompt 本身）
+        # delete title
         generated_text = generated_text.replace(prompt, "").strip()
 
-        # 确保文本长度在 20 到 80 字之间
         if len(generated_text) < 20:
-            # 如果太短，重新生成
+            # regenerate if the response is too short
             response = text_generator(prompt, max_length=60, temperature=0.8)
             generated_text = response[0]['generated_text'].replace(prompt, "").strip()
 
@@ -35,21 +34,19 @@ def generate_text_response(prompt):
 
 def get_projects_from_database():
     """
-    从数据库中提取项目信息，返回包含 projectID、clientID 和 ActualEndDate 的列表
+    Fetch key name if it is related to the database, such as projectID, clientID, actual_end_date
     """
     Session = sessionmaker(bind=engine)
     session = Session()
 
     try:
-        # 查询数据库中的项目信息
         projects = session.query(Project).all()
 
-        # 提取需要的字段
         project_info = [
             {
                 "projectID": project.ProjectID,
                 "clientID": project.ClientID,
-                "ActualEndDate": project.ActualEndDate.strftime("%Y-%m-%d") if project.ActualEndDate else None
+                "actual_end_date": project.ActualEndDate.strftime("%Y-%m-%d") if project.ActualEndDate else None
             }
             for project in projects
         ]
@@ -64,6 +61,7 @@ def get_projects_from_database():
 
 def generate_feedback(project, feedback_count):
     """
+    :param:
     为单个项目生成 feedback_count 个反馈
     """
     feedbacks = []

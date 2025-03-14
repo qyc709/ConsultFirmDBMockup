@@ -30,9 +30,12 @@ def generate_initial_source_data(START_YEAR, END_YEAR):
     
     # Generate Spreadsheet
     generate_indirect_costs()
+    print("database生成结束")
 
     # Generate non-billable time report
     generate_non_billable_time_report()
+    print("spreadsheet生成结束")
 
     # Generate json file
-    #generate_client_feedback()
+    generate_client_feedback()
+    print("JSON生成结束")

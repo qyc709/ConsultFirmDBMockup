@@ -2,8 +2,7 @@ import json
 import random
 from datetime import datetime, timedelta
 from transformers import pipeline  # using Hugging Face model
-from sqlalchemy.orm import sessionmaker
-from models.db_model import Project, engine 
+import sqlite3
 import os
 
 # initialize Hugging Face model
@@ -36,66 +35,80 @@ def get_projects_from_database():
     """
     Fetch key name if it is related to the database, such as projectID, clientID, actual_end_date
     """
-    Session = sessionmaker(bind=engine)
-    session = Session()
+    current_dir = os.getcwd()
+    db_path = f'{current_dir}/example_output/database'
 
-    try:
-        projects = session.query(Project).all()
+    db_file_path = f'{db_path}/consultingFirm_final.db'
+    conn = sqlite3.connect(db_file_path)
+    cursor = conn.cursor()
+    cursor.execute("SELECT projectID, clientID, actual_end_date FROM project")
 
-        project_info = [
-            {
-                "projectID": project.ProjectID,
-                "clientID": project.ClientID,
-                "actual_end_date": project.ActualEndDate.strftime("%Y-%m-%d") if project.ActualEndDate else None
-            }
-            for project in projects
-        ]
+    projects = cursor.fetchall()
 
-        return project_info
-    except Exception as e:
-        print(f"Error fetching projects from database: {e}")
-        return []
-    finally:
-        session.close()
+    project_info = []
+    for project in projects:
+        project_id, client_id, actual_end_date = project
+        
+        # Format the date if it exists
+        formatted_date = None
+        if actual_end_date:
+            try:
+                # Try parsing as ISO format string
+                formatted_date = datetime.fromisoformat(actual_end_date).strftime("%Y-%m-%d")
+                print(formatted_date)
+            except (ValueError, TypeError):
+                if isinstance(actual_end_date, (int, float)):
+                    # Try parsing as timestamp
+                    formatted_date = datetime.fromtimestamp(actual_end_date).strftime("%Y-%m-%d")
+        
+        project_info.append({
+            "projectID": project_id,
+            "clientID": client_id,
+            "actual_end_date": formatted_date
+        })
 
+    # Close the connection
+    conn.close()
+
+    return project_info
 
 def generate_feedback(project, feedback_count):
     """
-    :param:
-    为单个项目生成 feedback_count 个反馈
+    :param project: feedback for current project
+    :param feedback_count: the number of feedback for a single project
     """
     feedbacks = []
 
-    # 检查 ActualEndDate 是否为 None
-    if project['ActualEndDate'] is None:
+    # check if ActualEndDate is None
+    if project['actual_end_date'] is None:
         print(f"Skipping project {project['projectID']} because ActualEndDate is None")
         return feedbacks
 
     for _ in range(feedback_count):
-        # 生成 responseID
+        # generate responseID
         responseID = str(random.randint(10000, 99999))
 
-        # 计算 surveyDate
-        actual_end_date = datetime.strptime(project['ActualEndDate'], "%Y-%m-%d")
+        # calculate surveyDate
+        actual_end_date = datetime.strptime(project['actual_end_date'], "%Y-%m-%d")
         surveyDate = actual_end_date + timedelta(days=random.randint(7, 14))
 
-        # 生成前两个问题的评分
+        # generate rate for q1 and q2
         q1_value = random.randint(1, 5)
         q2_value = random.randint(1, 5)
 
-        # 计算 overallSatisfaction，取 q1_value 和 q2_value 之间的随机值
+        # get the overallSatisfaction, a random number between q1 and q2
         min_satisfaction = min(q1_value, q2_value)
         max_satisfaction = max(q1_value, q2_value)
         overallSatisfaction = round(random.uniform(min_satisfaction, max_satisfaction), 1)
 
-        # 生成后两个问题的回答
+        # generate answers for q3 and q4
         q3_prompt = "What did you like best about working with us?"
         q4_prompt = "What could we improve on?"
 
         q3_response = generate_text_response(q3_prompt)
         q4_response = generate_text_response(q4_prompt)
 
-        # 构建反馈 JSON
+        # format feedback answer in json
         feedback = {
             "responseID": responseID,
             "projectID": project['projectID'],
@@ -136,19 +149,19 @@ def generate_feedback(project, feedback_count):
 
 def generate_client_feedback():
     """
-    生成客户反馈 JSON 文件并保存到 example_output/json 目录
+    Generate client feedback JSON file and save to "example_output/json"
     """
-    # 从数据库中获取项目信息
+    # get project information from database
     projects = get_projects_from_database()
 
-    # 生成所有项目的反馈
+    # loop to generate feedback for all project
     all_feedbacks = []
     for project in projects:
-        # 每个项目生成 2-3 个反馈
+        # get the number of feedback, either 2 or 3 feedbacks per project
         feedback_count = random.randint(2, 3)
         all_feedbacks.extend(generate_feedback(project, feedback_count))
 
-    # 保存到 JSON 文件
+    # save the JSON file
     output_dir = os.path.join(os.path.dirname(__file__), "../../example_output/json")
     os.makedirs(output_dir, exist_ok=True)
     output_file = os.path.join(output_dir, "client_feedbacks.json")

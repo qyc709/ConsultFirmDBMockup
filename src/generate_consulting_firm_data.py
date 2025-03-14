@@ -5,6 +5,7 @@ import os
 import pandas as pd
 import random 
 import string
+import json
 
 MONTHS_OF_A_YEAR = 12
 TABLE_NAMES = ["Location", "Client", "BusinessUnit", "Project", "Deliverable", "Consultant", "Title", "ConsultantTitleHistory", "ConsultantDeliverable", "ProjectExpense", "ProjectTeam", "Payroll", "ProjectBillingRate"]
@@ -61,11 +62,10 @@ Generate a single version of consulting firm database
 
 output: sqlite .db file under /example_output/database
 """
-def generate_db_version(date, version):
+def generate_db_version(date, version, db_path):
 
     # get path to read the original database
     current_dir = os.getcwd()
-    db_path = f'{current_dir}/example_output/database'
     sql_path = f'{current_dir}/src/db_versions_sql'
 
     conn = sqlite3.connect(f'{db_path}/consulting_firm.db')
@@ -181,9 +181,7 @@ def generate_db_version(date, version):
         new_table.to_sql(table, conn_new, if_exists='append', index=False)
 
 # read excel and filter by date then save
-def filter_and_save_excel_files(date, version):
-    current_dir = os.getcwd()
-    excel_path = f'{current_dir}/example_output/spreadsheets'
+def filter_and_save_excel_files(date, version, excel_path):
 
     date_int = int(date[:7].replace("-", ""))  # Convert 'YYYY-MM' to 'YYYYMM' for comparison
 
@@ -214,6 +212,43 @@ def filter_and_save_excel_files(date, version):
                 df_filtered.to_excel(new_file_path, index=False)
 
 
+
+"""
+Generate a single version of client feedback json file
+
+:param date: last date of data in the required version
+:param version: version number or name
+:param json_path: file path to the full version json file
+
+output: {version}.json file under /example_output/json
+"""
+def generate_json_version(date, version, json_path):
+    end_date = datetime.strptime(date, '%Y-%m-%d')
+
+    file_path = f"{json_path}/client_feedbacks.json"
+    output_json_path = f"{json_path}/client_feedbacks_{version}.json"
+
+    with open(file_path, 'r') as file:
+        data = json.load(file)
+
+    filtered_data = []
+
+    for record in data:
+        try:
+            survey_date = datetime.strptime(record['surveyDate'], '%Y-%m-%d') 
+
+            if survey_date < end_date:
+                filtered_data.append(record)
+        except(KeyError, ValueError) as e:
+            print('f"Skipping record - Error: {e}"')
+
+    sorted_data = sorted(filtered_data, key=lambda x: datetime.strptime(x['surveyDate'], '%Y-%m-%d'))
+
+    with open(output_json_path, 'w') as file:
+        json.dump(sorted_data, file, indent=4)
+
+
+
 """
 Generate versions of consulting firm data
 
@@ -234,16 +269,27 @@ def generate_consulting_firm_data(start_year, initial_no_of_months, no_of_update
     # generate the source data
     generate_initial_source_data(start_year, end_year)
 
-    # generate initial version of database
-    date = get_date_from_number(start_year, initial_no_of_months)
-    generate_db_version(date, 'initial')
-    filter_and_save_excel_files(date, 'initial')
+    current_dir = os.getcwd()
+    db_path = f'{current_dir}/example_output/database'
+    excel_path = f'{current_dir}/example_output/spreadsheets'
+    json_path = f'{current_dir}/example_output/json'
 
     # generate incremental update versions of database
     for i in range(no_of_updates):
-        date = get_date_from_number(start_year, initial_no_of_months + i + 1)
-        generate_db_version(date, i + 1)
-        filter_and_save_excel_files(date, i + 1)
+
+        if i == 0:
+            version = 'initial'
+            date = get_date_from_number(start_year, initial_no_of_months)
+        elif i + 1 == no_of_updates:
+            version = 'final'
+            date = get_date_from_number(start_year, initial_no_of_months + i + 1)
+        else:
+            version = i + 1
+            date = get_date_from_number(start_year, initial_no_of_months + i + 1)
+
+        generate_db_version(date, version, db_path)
+        filter_and_save_excel_files(date, version, excel_path)
+        generate_json_version(date, version, json_path)
 
 if __name__ == '__main__':
-    generate_consulting_firm_data(2024, 6, 4)
+    generate_consulting_firm_data(2023, 6, 4)

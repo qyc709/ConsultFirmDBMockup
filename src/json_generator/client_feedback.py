@@ -36,7 +36,7 @@ def get_projects_from_database():
     Fetch key name if it is related to the database, such as projectID, clientID, actual_end_date
     """
     current_dir = os.getcwd()
-    db_path = f'{current_dir}/example_output/database'
+    db_path = f'{current_dir}/example_output/versions/database'
 
     db_file_path = f'{db_path}/consultingFirm_final.db'
     conn = sqlite3.connect(db_file_path)

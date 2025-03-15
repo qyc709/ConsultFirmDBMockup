@@ -6,6 +6,8 @@ import pandas as pd
 import random 
 import string
 import json
+from json_generator.client_feedback import generate_client_feedback 
+from upload_to_gcp.upload_files_to_bucket import upload_files_to_buckets
 
 MONTHS_OF_A_YEAR = 12
 TABLE_NAMES = ["Location", "Client", "BusinessUnit", "Project", "Deliverable", "Consultant", "Title", "ConsultantTitleHistory", "ConsultantDeliverable", "ProjectExpense", "ProjectTeam", "Payroll", "ProjectBillingRate"]
@@ -62,17 +64,24 @@ Generate a single version of consulting firm database
 
 output: sqlite .db file under /example_output/database
 """
-def generate_db_version(date, version, db_path):
+def generate_db_version(date, version, output_path):
 
     # get path to read the original database
     current_dir = os.getcwd()
     sql_path = f'{current_dir}/src/db_versions_sql'
 
-    conn = sqlite3.connect(f'{db_path}/consulting_firm.db')
+    conn = sqlite3.connect(f'{output_path}/database/consulting_firm.db')
 
     # create new version of sqlite db file
     db_name = f"consultingFirm_{version}.db"
-    db_version_path = f'{db_path}/{db_name}'
+
+    output_database_path = f"{output_path}/versions/database"
+    if not os.path.exists(output_database_path):
+        os.mkdir(output_database_path)
+    
+    db_version_path = f'{output_database_path}/{db_name}'
+
+    print(db_version_path)
 
     # check if there exists a db with the same file name
     # if exists, delete the database
@@ -181,12 +190,14 @@ def generate_db_version(date, version, db_path):
         new_table.to_sql(table, conn_new, if_exists='append', index=False)
 
 # read excel and filter by date then save
-def filter_and_save_excel_files(date, version, excel_path):
+def filter_and_save_excel_files(date, version, output_path):
 
     date_int = int(date[:7].replace("-", ""))  # Convert 'YYYY-MM' to 'YYYYMM' for comparison
 
     for file_base in EXCEL_NAMES:
-        original_file_path = os.path.join(excel_path, f"{file_base}.xlsx")
+
+        original_file_path = f"{output_path}/spreadsheets/{file_base}.xlsx"
+        print(original_file_path)
 
         # Ensure the original file exists before trying to read
         if not os.path.exists(original_file_path):
@@ -206,7 +217,12 @@ def filter_and_save_excel_files(date, version, excel_path):
             if not df_filtered.empty:  # Only save if there are filtered rows
                 # Create new filename with version appended
                 new_filename = f"{file_base}_{version}.xlsx"
-                new_file_path = os.path.join(excel_path, new_filename)
+
+                output_ss_path = f"{output_path}/versions/spreadsheets"
+                if not os.path.exists(output_ss_path):
+                    os.mkdir(output_ss_path)
+
+                new_file_path = f'{output_ss_path}/{new_filename}'
 
                 # Save the filtered data
                 df_filtered.to_excel(new_file_path, index=False)
@@ -222,11 +238,16 @@ Generate a single version of client feedback json file
 
 output: {version}.json file under /example_output/json
 """
-def generate_json_version(date, version, json_path):
+def generate_json_version(date, version, output_path):
     end_date = datetime.strptime(date, '%Y-%m-%d')
 
-    file_path = f"{json_path}/client_feedbacks.json"
-    output_json_path = f"{json_path}/client_feedbacks_{version}.json"
+    file_path = f"{output_path}/json/client_feedbacks.json"
+
+    output_js_path = f"{output_path}/versions/json"
+    if not os.path.exists(output_js_path):
+        os.mkdir(output_js_path)
+
+    output_json_path = f"{output_js_path}/client_feedbacks_{version}.json"
 
     with open(file_path, 'r') as file:
         data = json.load(file)
@@ -270,9 +291,10 @@ def generate_consulting_firm_data(start_year, initial_no_of_months, no_of_update
     generate_initial_source_data(start_year, end_year)
 
     current_dir = os.getcwd()
-    db_path = f'{current_dir}/example_output/database'
-    excel_path = f'{current_dir}/example_output/spreadsheets'
-    json_path = f'{current_dir}/example_output/json'
+    output_path = f'{current_dir}/example_output'
+
+    if not os.path.exists(f"{output_path}/versions"):
+        os.mkdir(f"{output_path}/versions")
 
     # generate incremental update versions of database
     for i in range(no_of_updates):
@@ -287,9 +309,27 @@ def generate_consulting_firm_data(start_year, initial_no_of_months, no_of_update
             version = i + 1
             date = get_date_from_number(start_year, initial_no_of_months + i + 1)
 
-        generate_db_version(date, version, db_path)
-        filter_and_save_excel_files(date, version, excel_path)
-        generate_json_version(date, version, json_path)
+        generate_db_version(date, version, output_path)
+        filter_and_save_excel_files(date, version, output_path)
+
+    # Generate json file
+    generate_client_feedback()
+    print("JSON生成结束")
+
+    for i in range(no_of_updates):
+        if i == 0:
+            version = 'initial'
+            date = get_date_from_number(start_year, initial_no_of_months)
+        elif i + 1 == no_of_updates:
+            version = 'final'
+            date = get_date_from_number(start_year, initial_no_of_months + i + 1)
+        else:
+            version = i + 1
+            date = get_date_from_number(start_year, initial_no_of_months + i + 1)
+
+        generate_json_version(date, version, output_path)
+
+    # upload_files_to_buckets()
 
 if __name__ == '__main__':
     generate_consulting_firm_data(2023, 6, 4)

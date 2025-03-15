@@ -52,3 +52,6 @@ python-dateutil
 
 # JSON Handling
 ujson
+
+# Google Cloud API
+google-cloud-storage

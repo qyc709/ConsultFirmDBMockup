@@ -11,7 +11,6 @@ from database_generator.generators.payroll import generate_payroll
 from database_generator.generators.project_deliverable import generate_projects
 from spreadsheet_generator.indirect_cost import generate_indirect_costs
 from spreadsheet_generator.non_billable_time import generate_non_billable_time_report
-from json_generator.client_feedback import generate_client_feedback  # 导入生成客户反馈的模块
 
 INITIAL_CONSULTANTS = 100
 
@@ -35,7 +34,3 @@ def generate_initial_source_data(START_YEAR, END_YEAR):
     # Generate non-billable time report
     generate_non_billable_time_report()
     print("spreadsheet生成结束")
-
-    # Generate json file
-    generate_client_feedback()
-    print("JSON生成结束")

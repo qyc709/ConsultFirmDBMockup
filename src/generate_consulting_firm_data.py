@@ -331,5 +331,7 @@ def generate_consulting_firm_data(start_year, initial_no_of_months, no_of_update
 
     # upload_files_to_buckets()
 
+    
+
 if __name__ == '__main__':
-    generate_consulting_firm_data(2023, 6, 4)
+    generate_consulting_firm_data(2024, 6, 4)

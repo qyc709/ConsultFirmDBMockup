@@ -1,9 +1,75 @@
 [
     {
-        "responseID": "86894",
-        "projectID": "PROJ-D4V3",
-        "clientID": 5,
-        "surveyDate": "2023-02-18",
+        "responseID": "71026",
+        "projectID": "PROJ-UZBI",
+        "clientID": 97,
+        "surveyDate": "2024-04-11",
+        "responses": [
+            {
+                "questionID": "Q1",
+                "questionText": "How satisfied are you with the project outcome?",
+                "responseType": "scale",
+                "responseValue": "5"
+            },
+            {
+                "questionID": "Q2",
+                "questionText": "Please rate the communication from our team.",
+                "responseType": "scale",
+                "responseValue": "3"
+            },
+            {
+                "questionID": "Q3",
+                "questionText": "What did you like best about working with us?",
+                "responseType": "text",
+                "responseValue": "We look at the world of music and how it inspires people. We want to be able to work with the people who are passionate about music. That's what I really like about working with the guys that are going to be in the studio with us. It's exciting to work with guys"
+            },
+            {
+                "questionID": "Q4",
+                "questionText": "What could we improve on?",
+                "responseType": "text",
+                "responseValue": "Well, we could:\n\nIn the end, it's all about learning. It helps make your life more enjoyable and more fulfilling.\n\nLearning through video games is the future of gaming."
+            }
+        ],
+        "overallSatisfaction": "4.5"
+    },
+    {
+        "responseID": "16910",
+        "projectID": "PROJ-UZBI",
+        "clientID": 97,
+        "surveyDate": "2024-04-13",
+        "responses": [
+            {
+                "questionID": "Q1",
+                "questionText": "How satisfied are you with the project outcome?",
+                "responseType": "scale",
+                "responseValue": "5"
+            },
+            {
+                "questionID": "Q2",
+                "questionText": "Please rate the communication from our team.",
+                "responseType": "scale",
+                "responseValue": "2"
+            },
+            {
+                "questionID": "Q3",
+                "questionText": "What did you like best about working with us?",
+                "responseType": "text",
+                "responseValue": "You can read more about our project here."
+            },
+            {
+                "questionID": "Q4",
+                "questionText": "What could we improve on?",
+                "responseType": "text",
+                "responseValue": "As a society we need to be more open and more open about what we do to ourselves. We need to be more open to different ideas and different ways of doing things. We need to be more open to different creative ways of doing things. We need to be more open to different ways of thinking about what"
+            }
+        ],
+        "overallSatisfaction": "3.4"
+    },
+    {
+        "responseID": "21661",
+        "projectID": "PROJ-UZBI",
+        "clientID": 97,
+        "surveyDate": "2024-04-16",
         "responses": [
             {
                 "questionID": "Q1",
@@ -15,61 +81,28 @@
                 "questionID": "Q2",
                 "questionText": "Please rate the communication from our team.",
                 "responseType": "scale",
-                "responseValue": "1"
+                "responseValue": "3"
             },
             {
                 "questionID": "Q3",
                 "questionText": "What did you like best about working with us?",
                 "responseType": "text",
-                "responseValue": "I am happy to answer any of your questions. We are very happy to help with any questions or concerns you may have. We hope you enjoy your stay, and we look forward to seeing you again in the future.\n\nPlease note: We are not responsible for any damage caused to"
+                "responseValue": "It's just an unbelievable experience. When I first started working with Rob, he was like, \"Oh, you know what, I think I'm a lot better than that.\" He was like, \"It doesn't matter. I'm still here, and I'm going to come back"
             },
             {
                 "questionID": "Q4",
                 "questionText": "What could we improve on?",
                 "responseType": "text",
-                "responseValue": "We want to improve the way we run our software. We want to get your feedback more easily and we want to make it available for you to participate in the discussion. We want to make sure that we are fully transparent about what we are doing.\n\nThe first thing that we want to do is make"
+                "responseValue": "I think we got a lot of good ideas but it was a bit too late to fix the problem. If we can do something, then we can do it.\n\nWhat will the next step be?\n\nWe can actually do some things. We can start by taking a look at the data and"
             }
         ],
-        "overallSatisfaction": "2.4"
+        "overallSatisfaction": "3.7"
     },
     {
-        "responseID": "79865",
-        "projectID": "PROJ-D4V3",
-        "clientID": 5,
-        "surveyDate": "2023-02-21",
-        "responses": [
-            {
-                "questionID": "Q1",
-                "questionText": "How satisfied are you with the project outcome?",
-                "responseType": "scale",
-                "responseValue": "4"
-            },
-            {
-                "questionID": "Q2",
-                "questionText": "Please rate the communication from our team.",
-                "responseType": "scale",
-                "responseValue": "1"
-            },
-            {
-                "questionID": "Q3",
-                "questionText": "What did you like best about working with us?",
-                "responseType": "text",
-                "responseValue": "I like working with people that I feel are interesting and interesting enough to collaborate.\n\nHow does your work differ from other projects you work with? How do you find inspiration from different genres?\n\nI like the idea of people being able to create their own ideas and have fun exploring"
-            },
-            {
-                "questionID": "Q4",
-                "questionText": "What could we improve on?",
-                "responseType": "text",
-                "responseValue": "I'm not sure any of those things, let alone adding more information to our tools.\n\nWe can get the number of things that we do, but we're just too busy to spend time on finding things that work.\n\nI was thinking about this in May, and I thought, \"But"
-            }
-        ],
-        "overallSatisfaction": "2.8"
-    },
-    {
-        "responseID": "18675",
-        "projectID": "PROJ-T3W5",
-        "clientID": 294,
-        "surveyDate": "2023-02-23",
+        "responseID": "43773",
+        "projectID": "PROJ-VG0F",
+        "clientID": 318,
+        "surveyDate": "2024-06-02",
         "responses": [
             {
                 "questionID": "Q1",
@@ -81,127 +114,226 @@
                 "questionID": "Q2",
                 "questionText": "Please rate the communication from our team.",
                 "responseType": "scale",
+                "responseValue": "1"
+            },
+            {
+                "questionID": "Q3",
+                "questionText": "What did you like best about working with us?",
+                "responseType": "text",
+                "responseValue": "I loved the way we could work together. My wife and I came from a small town called Cottage Grove, Illinois and I was living in a small town called Lincoln. So, we spent a lot of time on the weekends. And our group was very friendly. We were the only"
+            },
+            {
+                "questionID": "Q4",
+                "questionText": "What could we improve on?",
+                "responseType": "text",
+                "responseValue": "We can do things better.\n\nWe can do things better.\n\nWe can do things better.\n\nWe can do things better.\n\nI can't say what we can do better, but if we are going to make progress, we need to do things better.\n\nI can"
+            }
+        ],
+        "overallSatisfaction": "1.5"
+    },
+    {
+        "responseID": "80838",
+        "projectID": "PROJ-VG0F",
+        "clientID": 318,
+        "surveyDate": "2024-06-07",
+        "responses": [
+            {
+                "questionID": "Q1",
+                "questionText": "How satisfied are you with the project outcome?",
+                "responseType": "scale",
+                "responseValue": "3"
+            },
+            {
+                "questionID": "Q2",
+                "questionText": "Please rate the communication from our team.",
+                "responseType": "scale",
+                "responseValue": "1"
+            },
+            {
+                "questionID": "Q3",
+                "questionText": "What did you like best about working with us?",
+                "responseType": "text",
+                "responseValue": "This was a great experience. One thing we've learned from working with some of these guys is how to work with them, we've gotten used to working with them and we can work with them as long as we don't have a problem with their behavior.\n\nWhat's your approach"
+            },
+            {
+                "questionID": "Q4",
+                "questionText": "What could we improve on?",
+                "responseType": "text",
+                "responseValue": "I think that's a good question.\n\nWhen you take the risk and make sure that you're not getting caught, you might as well be safe. So, this guy, he told me, he's a good guy, but he's not the same guy as a lot of the other guys."
+            }
+        ],
+        "overallSatisfaction": "2.7"
+    },
+    {
+        "responseID": "62997",
+        "projectID": "PROJ-75LX",
+        "clientID": 322,
+        "surveyDate": "2024-07-06",
+        "responses": [
+            {
+                "questionID": "Q1",
+                "questionText": "How satisfied are you with the project outcome?",
+                "responseType": "scale",
+                "responseValue": "5"
+            },
+            {
+                "questionID": "Q2",
+                "questionText": "Please rate the communication from our team.",
+                "responseType": "scale",
                 "responseValue": "5"
             },
             {
                 "questionID": "Q3",
                 "questionText": "What did you like best about working with us?",
                 "responseType": "text",
-                "responseValue": "I think you can't go wrong with the food. It's the best part of the job. If you have a lot of things that you don't have to do, everything is done in the kitchen. But I want you to have a good time because I want to hear what you"
+                "responseValue": "I thought this was gonna be a really cool project, and I wanted to do something really unique. I wanted to explore how we could make this kind of thing happen. The first thing I did was create a simple layout that we could use to show off different things. I would say it"
             },
             {
                 "questionID": "Q4",
                 "questionText": "What could we improve on?",
                 "responseType": "text",
-                "responseValue": "A lot of what we've done in the past has been pretty obvious. But we're going to be going back to a more general approach.\n\nWe can do a lot more. There's a lot of other stuff I'm looking at, and some of the things we've done over the past few"
+                "responseValue": "Why should people care?\n\nBut what if we had some kind of proof that there was something in the world that we didn't understand?\n\nCould we ask questions that might be difficult to answer?\n\nWould our understanding of what was going on be better than that of our less experienced peers?"
+            }
+        ],
+        "overallSatisfaction": "5.0"
+    },
+    {
+        "responseID": "15697",
+        "projectID": "PROJ-75LX",
+        "clientID": 322,
+        "surveyDate": "2024-07-06",
+        "responses": [
+            {
+                "questionID": "Q1",
+                "questionText": "How satisfied are you with the project outcome?",
+                "responseType": "scale",
+                "responseValue": "2"
+            },
+            {
+                "questionID": "Q2",
+                "questionText": "Please rate the communication from our team.",
+                "responseType": "scale",
+                "responseValue": "1"
+            },
+            {
+                "questionID": "Q3",
+                "questionText": "What did you like best about working with us?",
+                "responseType": "text",
+                "responseValue": "Yes, I liked the way our teams were organized. We didn't have any of the 'uniforms' you see in the media, but we did have some of the uniform design that we used with the other teams. We also had some of our own uniforms. We had some"
+            },
+            {
+                "questionID": "Q4",
+                "questionText": "What could we improve on?",
+                "responseType": "text",
+                "responseValue": "As it turns out, the only thing we could do was turn our attention to the other side of the coin.\n\nIn the years to come, we'll be working with each other to create a new version of the game.\n\nA new version is coming, but we are going to keep it"
+            }
+        ],
+        "overallSatisfaction": "1.4"
+    },
+    {
+        "responseID": "70402",
+        "projectID": "PROJ-75LX",
+        "clientID": 322,
+        "surveyDate": "2024-07-07",
+        "responses": [
+            {
+                "questionID": "Q1",
+                "questionText": "How satisfied are you with the project outcome?",
+                "responseType": "scale",
+                "responseValue": "2"
+            },
+            {
+                "questionID": "Q2",
+                "questionText": "Please rate the communication from our team.",
+                "responseType": "scale",
+                "responseValue": "1"
+            },
+            {
+                "questionID": "Q3",
+                "questionText": "What did you like best about working with us?",
+                "responseType": "text",
+                "responseValue": "I didn't want to let my boss get away with it. I want to tell him that I am a great person and that I have a great job.\n\nI was very impressed by the leadership at the City of London, including the mayor and the deputy mayor.\n\nWe"
+            },
+            {
+                "questionID": "Q4",
+                "questionText": "What could we improve on?",
+                "responseType": "text",
+                "responseValue": "There are some things we can do to improve the experience for people to play with. For example, we're going to try to have a more intuitive and interactive interface. We're going to make it easier for people to see the game, where you can play the game. We're going to give users a"
+            }
+        ],
+        "overallSatisfaction": "1.7"
+    },
+    {
+        "responseID": "58515",
+        "projectID": "PROJ-N9XU",
+        "clientID": 267,
+        "surveyDate": "2024-07-12",
+        "responses": [
+            {
+                "questionID": "Q1",
+                "questionText": "How satisfied are you with the project outcome?",
+                "responseType": "scale",
+                "responseValue": "2"
+            },
+            {
+                "questionID": "Q2",
+                "questionText": "Please rate the communication from our team.",
+                "responseType": "scale",
+                "responseValue": "1"
+            },
+            {
+                "questionID": "Q3",
+                "questionText": "What did you like best about working with us?",
+                "responseType": "text",
+                "responseValue": "I like how we are all friends and I like how we have fun working with each other. I really like how we're all doing what we're doing and that's just a nice thing.\n\nI've been playing games for years and I've always loved the atmosphere and the challenge"
+            },
+            {
+                "questionID": "Q4",
+                "questionText": "What could we improve on?",
+                "responseType": "text",
+                "responseValue": "Perhaps the most important thing that we could do is to make it feel more like something else that we can do. If we are doing this, we can make it feel less like we're doing anything else, that this is something else. We can write about that. We can write about the things that make"
+            }
+        ],
+        "overallSatisfaction": "1.9"
+    },
+    {
+        "responseID": "21396",
+        "projectID": "PROJ-0T9N",
+        "clientID": 340,
+        "surveyDate": "2024-07-13",
+        "responses": [
+            {
+                "questionID": "Q1",
+                "questionText": "How satisfied are you with the project outcome?",
+                "responseType": "scale",
+                "responseValue": "5"
+            },
+            {
+                "questionID": "Q2",
+                "questionText": "Please rate the communication from our team.",
+                "responseType": "scale",
+                "responseValue": "3"
+            },
+            {
+                "questionID": "Q3",
+                "questionText": "What did you like best about working with us?",
+                "responseType": "text",
+                "responseValue": "I'm always really happy to see people from all over the world come to work for me. We have a good group and we have a very good vibe. I think that's something that's been very important for me to get to where I am. I can't say it's been"
+            },
+            {
+                "questionID": "Q4",
+                "questionText": "What could we improve on?",
+                "responseType": "text",
+                "responseValue": "If you take a look at the average GDP value of an economy, you'll see that people think of the GDP as a whole. If you look at the total GDP of the world, they think of it as a whole.\n\nBut what if you take a look at the GDP of the world?"
             }
         ],
         "overallSatisfaction": "4.6"
     },
     {
-        "responseID": "66324",
-        "projectID": "PROJ-D4V3",
-        "clientID": 5,
-        "surveyDate": "2023-02-24",
-        "responses": [
-            {
-                "questionID": "Q1",
-                "questionText": "How satisfied are you with the project outcome?",
-                "responseType": "scale",
-                "responseValue": "1"
-            },
-            {
-                "questionID": "Q2",
-                "questionText": "Please rate the communication from our team.",
-                "responseType": "scale",
-                "responseValue": "4"
-            },
-            {
-                "questionID": "Q3",
-                "questionText": "What did you like best about working with us?",
-                "responseType": "text",
-                "responseValue": "I am glad to say I am a little more confident. I think the best thing about working with us is that we are very good friends and I enjoy working with them.\n\nHow did you get your first taste of working with someone from the community?\n\nWorking with people from"
-            },
-            {
-                "questionID": "Q4",
-                "questionText": "What could we improve on?",
-                "responseType": "text",
-                "responseValue": "As we've talked about in this post, there are some important things to consider when evaluating mobile apps.\n\nWhat are the most important features of an app?\n\nFor mobile apps, we could look at the main features of the app. What do we want to do with the app? What kind"
-            }
-        ],
-        "overallSatisfaction": "3.4"
-    },
-    {
-        "responseID": "86272",
-        "projectID": "PROJ-T3W5",
-        "clientID": 294,
-        "surveyDate": "2023-02-24",
-        "responses": [
-            {
-                "questionID": "Q1",
-                "questionText": "How satisfied are you with the project outcome?",
-                "responseType": "scale",
-                "responseValue": "5"
-            },
-            {
-                "questionID": "Q2",
-                "questionText": "Please rate the communication from our team.",
-                "responseType": "scale",
-                "responseValue": "2"
-            },
-            {
-                "questionID": "Q3",
-                "questionText": "What did you like best about working with us?",
-                "responseType": "text",
-                "responseValue": "What was your favorite part of working with us? When you were with us, what was the biggest challenge you faced working with us?\n\nShannon: We knew what we wanted to do and we had a lot of fun making it work. Sometimes we would make a lot more money for it"
-            },
-            {
-                "questionID": "Q4",
-                "questionText": "What could we improve on?",
-                "responseType": "text",
-                "responseValue": "The answer is that we can. We're going to need to make changes to our system, and then we can create better ones.\n\nThere's still a lot of work to be done. Our core team is currently struggling with the transition from a client-side to a management-side approach. We"
-            }
-        ],
-        "overallSatisfaction": "4.1"
-    },
-    {
-        "responseID": "73636",
-        "projectID": "PROJ-T3W5",
-        "clientID": 294,
-        "surveyDate": "2023-02-25",
-        "responses": [
-            {
-                "questionID": "Q1",
-                "questionText": "How satisfied are you with the project outcome?",
-                "responseType": "scale",
-                "responseValue": "5"
-            },
-            {
-                "questionID": "Q2",
-                "questionText": "Please rate the communication from our team.",
-                "responseType": "scale",
-                "responseValue": "1"
-            },
-            {
-                "questionID": "Q3",
-                "questionText": "What did you like best about working with us?",
-                "responseType": "text",
-                "responseValue": "I am very surprised by the fact that we have so many wonderful people in our staff and people are very professional. It's amazing how hard it has been to get the job done.\n\nWho are your biggest influences in the industry?\n\nI am a former CEO of Vod"
-            },
-            {
-                "questionID": "Q4",
-                "questionText": "What could we improve on?",
-                "responseType": "text",
-                "responseValue": "Well, this is a really interesting question. Can we improve the way we measure performance? There is a lot of work that needs to be done to really understand how performance can be improved.\n\nI think there is some work that has to be done, and the work we are doing is not necessarily going"
-            }
-        ],
-        "overallSatisfaction": "4.2"
-    },
-    {
-        "responseID": "46502",
-        "projectID": "PROJ-VG0F",
-        "clientID": 332,
-        "surveyDate": "2023-04-08",
+        "responseID": "77441",
+        "projectID": "PROJ-0T9N",
+        "clientID": 340,
+        "surveyDate": "2024-07-13",
         "responses": [
             {
                 "questionID": "Q1",
@@ -212,128 +344,29 @@
             {
                 "questionID": "Q2",
                 "questionText": "Please rate the communication from our team.",
-                "responseType": "scale",
-                "responseValue": "4"
-            },
-            {
-                "questionID": "Q3",
-                "questionText": "What did you like best about working with us?",
-                "responseType": "text",
-                "responseValue": "Well, I think that's the question. We're pretty much just people who work on their own, so it's great. We have a lot of fun working with people. We like to really try to learn from each other.\n\nWhat's the best way to make your work"
-            },
-            {
-                "questionID": "Q4",
-                "questionText": "What could we improve on?",
-                "responseType": "text",
-                "responseValue": "We can do a lot of things that are less complex or less efficient, but we can't do it on a large scale.\n\nFor example, we can make it easy to get a full dataset of every person that has ever died, but we can't do this on a large scale."
-            }
-        ],
-        "overallSatisfaction": "3.4"
-    },
-    {
-        "responseID": "65209",
-        "projectID": "PROJ-VG0F",
-        "clientID": 332,
-        "surveyDate": "2023-04-14",
-        "responses": [
-            {
-                "questionID": "Q1",
-                "questionText": "How satisfied are you with the project outcome?",
-                "responseType": "scale",
-                "responseValue": "2"
-            },
-            {
-                "questionID": "Q2",
-                "questionText": "Please rate the communication from our team.",
-                "responseType": "scale",
-                "responseValue": "4"
-            },
-            {
-                "questionID": "Q3",
-                "questionText": "What did you like best about working with us?",
-                "responseType": "text",
-                "responseValue": "I knew that I had a lot of work to do and that I would need to work with a lot of people to do that. I have been here at the company for five years and have always had some great employees, but the last five years I have been really lucky, it's"
-            },
-            {
-                "questionID": "Q4",
-                "questionText": "What could we improve on?",
-                "responseType": "text",
-                "responseValue": "We can't.\n\nBut we can at least add some good stuff. Here are a few of the top reasons to give something back:\n\nThe people who have been doing it the longest and most diligently are the ones who really get the most out of this.\n\nThe people who have been"
-            }
-        ],
-        "overallSatisfaction": "3.0"
-    },
-    {
-        "responseID": "72513",
-        "projectID": "PROJ-VG0F",
-        "clientID": 332,
-        "surveyDate": "2023-04-14",
-        "responses": [
-            {
-                "questionID": "Q1",
-                "questionText": "How satisfied are you with the project outcome?",
-                "responseType": "scale",
-                "responseValue": "2"
-            },
-            {
-                "questionID": "Q2",
-                "questionText": "Please rate the communication from our team.",
-                "responseType": "scale",
-                "responseValue": "1"
-            },
-            {
-                "questionID": "Q3",
-                "questionText": "What did you like best about working with us?",
-                "responseType": "text",
-                "responseValue": "The fact that we have been able to make one of the largest-ever online community resources and create a vast amount of content on these websites is a big accomplishment.\n\nWhat are your favorite projects or projects you've done, or what are your favorite books or movies?\n\nI"
-            },
-            {
-                "questionID": "Q4",
-                "questionText": "What could we improve on?",
-                "responseType": "text",
-                "responseValue": "There are many different ways to take advantage of the features to add extra functionality or to improve usability.\n\nThere are many different ways to take advantage of the features to add extra functionality or to improve usability. Get More features\n\nAdd more features to your app.\n\nAdd more features to your app"
-            }
-        ],
-        "overallSatisfaction": "1.8"
-    },
-    {
-        "responseID": "48238",
-        "projectID": "PROJ-KWNN",
-        "clientID": 260,
-        "surveyDate": "2023-05-22",
-        "responses": [
-            {
-                "questionID": "Q1",
-                "questionText": "How satisfied are you with the project outcome?",
                 "responseType": "scale",
                 "responseValue": "3"
             },
             {
-                "questionID": "Q2",
-                "questionText": "Please rate the communication from our team.",
-                "responseType": "scale",
-                "responseValue": "1"
-            },
-            {
                 "questionID": "Q3",
                 "questionText": "What did you like best about working with us?",
                 "responseType": "text",
-                "responseValue": "Jared: We are really excited about working with them and having them in the studio and being able to share with you all their work with the community.\n\nI got the feeling that we had a great deal of help from them, and we had to do it for them."
+                "responseValue": "My friend Alex is a great guy, he's a good guy. He's a great guy, and I really like him. He's a great guy, and we've made a lot of progress, and I think that's a good thing. He's a great guy, but he"
             },
             {
                 "questionID": "Q4",
                 "questionText": "What could we improve on?",
                 "responseType": "text",
-                "responseValue": "My goal is to create a system that allows players to get into a game in a meaningful way and be able to play with others in ways that make for a lasting connection with each other.\n\nWhat about a game in which you're not a player or a player who's a bit of a joke?"
+                "responseValue": "I don't think we have a system that solves all of this. I think that's what we need to do is be able to look at the whole economy, look at trade patterns, look at how it's going to evolve.\n\nAnd when you look at markets, these are very clear indicators of"
             }
         ],
         "overallSatisfaction": "2.2"
     },
     {
-        "responseID": "28386",
-        "projectID": "PROJ-KWNN",
-        "clientID": 260,
-        "surveyDate": "2023-05-27",
+        "responseID": "36307",
+        "projectID": "PROJ-0T9N",
+        "clientID": 340,
+        "surveyDate": "2024-07-13",
         "responses": [
             {
                 "questionID": "Q1",
@@ -345,28 +378,61 @@
                 "questionID": "Q2",
                 "questionText": "Please rate the communication from our team.",
                 "responseType": "scale",
-                "responseValue": "1"
+                "responseValue": "3"
             },
             {
                 "questionID": "Q3",
                 "questionText": "What did you like best about working with us?",
                 "responseType": "text",
-                "responseValue": "I never really got into that stuff. I felt like it made me sound like myself, but it really felt like me and the team. It was like, 'OK, so you're a real guy, we're just going to sit here and play your game.'\n\nI feel"
+                "responseValue": "I really enjoyed it. I think people come here and say, \"I do this, and I'm going to go work with you at the next dinner party or something, and I'm going to be like, 'I'm not going to work with you anymore,'\" and I said,"
             },
             {
                 "questionID": "Q4",
                 "questionText": "What could we improve on?",
                 "responseType": "text",
-                "responseValue": "It would be great if there was a way to create a new level of fun. There are a lot of new areas, more than one, and we want you to think about how you would like the game to be played.\n\nHow would you like the game to be played?\n\nWe'd"
+                "responseValue": "A. We have to get more into a systematic approach to education. So our focus is on getting us to learn, not getting us to get caught up in the hype.\n\n\"We need to start moving away from the hype, and start focusing on learning, not getting caught up in the hype.\""
             }
         ],
-        "overallSatisfaction": "1.0"
+        "overallSatisfaction": "1.2"
     },
     {
-        "responseID": "60906",
+        "responseID": "99930",
         "projectID": "PROJ-N9XU",
-        "clientID": 91,
-        "surveyDate": "2023-06-03",
+        "clientID": 267,
+        "surveyDate": "2024-07-13",
+        "responses": [
+            {
+                "questionID": "Q1",
+                "questionText": "How satisfied are you with the project outcome?",
+                "responseType": "scale",
+                "responseValue": "5"
+            },
+            {
+                "questionID": "Q2",
+                "questionText": "Please rate the communication from our team.",
+                "responseType": "scale",
+                "responseValue": "3"
+            },
+            {
+                "questionID": "Q3",
+                "questionText": "What did you like best about working with us?",
+                "responseType": "text",
+                "responseValue": "Share this article with your friends!\n\nPhoto of the day by J.K. Johnson."
+            },
+            {
+                "questionID": "Q4",
+                "questionText": "What could we improve on?",
+                "responseType": "text",
+                "responseValue": "We can't easily do it. It would take a lot of work and a lot of experience. But we can do it.\n\nWe can do it. We can do it. And we can do it.\n\nIf we could just push it, that would be nice.\n\n(AP"
+            }
+        ],
+        "overallSatisfaction": "4.2"
+    },
+    {
+        "responseID": "96301",
+        "projectID": "PROJ-N9XU",
+        "clientID": 267,
+        "surveyDate": "2024-07-16",
         "responses": [
             {
                 "questionID": "Q1",
@@ -384,121 +450,22 @@
                 "questionID": "Q3",
                 "questionText": "What did you like best about working with us?",
                 "responseType": "text",
-                "responseValue": "I loved the artistry of our artists and the way they chose to use them. I think they chose to use them in their own way for their own stories. They used the images and the words and the expressions and the humor to create a way for me to express my own feelings and"
+                "responseValue": "We are very excited about all of the new features we have introduced in this release. We are currently working on a number of new features, but we will continue to add new features as we improve and complete our game.\n\nWhat are your favorite things about working with us?"
             },
             {
                 "questionID": "Q4",
                 "questionText": "What could we improve on?",
                 "responseType": "text",
-                "responseValue": "Let's just stick with the basics.\n\nWe need to take into account the power of our data: we can see the value of how much we spend a day per hour on a device. We can compare that with the value that data can capture."
-            }
-        ],
-        "overallSatisfaction": "2.5"
-    },
-    {
-        "responseID": "83481",
-        "projectID": "PROJ-N9XU",
-        "clientID": 91,
-        "surveyDate": "2023-06-05",
-        "responses": [
-            {
-                "questionID": "Q1",
-                "questionText": "How satisfied are you with the project outcome?",
-                "responseType": "scale",
-                "responseValue": "2"
-            },
-            {
-                "questionID": "Q2",
-                "questionText": "Please rate the communication from our team.",
-                "responseType": "scale",
-                "responseValue": "3"
-            },
-            {
-                "questionID": "Q3",
-                "questionText": "What did you like best about working with us?",
-                "responseType": "text",
-                "responseValue": "I have to say, I've been doing this for a long time. I have never had a problem with this brand. I've seen it on television and, of course, it is the same brand. I've seen it on the radio. I've seen it on the TV."
-            },
-            {
-                "questionID": "Q4",
-                "questionText": "What could we improve on?",
-                "responseType": "text",
-                "responseValue": "One of the reasons I've had so many questions about these two books is that they both deal with \"the human mind.\" It's not the only part of the brain that's involved in thinking, but it is the brain that produces all of the images and thoughts of the day. The other part of the"
-            }
-        ],
-        "overallSatisfaction": "2.9"
-    },
-    {
-        "responseID": "38544",
-        "projectID": "PROJ-N9XU",
-        "clientID": 91,
-        "surveyDate": "2023-06-07",
-        "responses": [
-            {
-                "questionID": "Q1",
-                "questionText": "How satisfied are you with the project outcome?",
-                "responseType": "scale",
-                "responseValue": "4"
-            },
-            {
-                "questionID": "Q2",
-                "questionText": "Please rate the communication from our team.",
-                "responseType": "scale",
-                "responseValue": "1"
-            },
-            {
-                "questionID": "Q3",
-                "questionText": "What did you like best about working with us?",
-                "responseType": "text",
-                "responseValue": "I really like the fact that you can make your own game, and I think that's what makes our team so special. They do their best to make games that you can own and enjoy. But it's a small piece of the puzzle. It's great to hear that the team at"
-            },
-            {
-                "questionID": "Q4",
-                "questionText": "What could we improve on?",
-                "responseType": "text",
-                "responseValue": "We can create a new way of thinking about how we work, how we interact with other people, and how we handle these things.\n\nWe can start with learning how to talk to people.\n\nWe can start with talking to people. We can start with learning that when it comes to work we"
-            }
-        ],
-        "overallSatisfaction": "1.3"
-    },
-    {
-        "responseID": "83298",
-        "projectID": "PROJ-KCID",
-        "clientID": 321,
-        "surveyDate": "2023-06-24",
-        "responses": [
-            {
-                "questionID": "Q1",
-                "questionText": "How satisfied are you with the project outcome?",
-                "responseType": "scale",
-                "responseValue": "2"
-            },
-            {
-                "questionID": "Q2",
-                "questionText": "Please rate the communication from our team.",
-                "responseType": "scale",
-                "responseValue": "3"
-            },
-            {
-                "questionID": "Q3",
-                "questionText": "What did you like best about working with us?",
-                "responseType": "text",
-                "responseValue": "It's really quite different than working with any other studio. As a producer, I would like to know what you think of my approach and what you think about my work. I would love to hear from you, either directly or through email.\n\nI would love you to answer any"
-            },
-            {
-                "questionID": "Q4",
-                "questionText": "What could we improve on?",
-                "responseType": "text",
-                "responseValue": "We're taking the first step. And we're going to give you an awesome way to use this in your app.\"\n\nAdvertisement\n\nIn the meantime, I'm working on a way to integrate the features into your app that will allow you to take home a photo of a child. (The photo is a"
+                "responseValue": "In the beginning we wanted to create a system where we wanted to take advantage of those things that we knew we could do as a team and make it work. But that was not what we were going to do. Our focus is on getting the best possible experience out of the game, and not on our own"
             }
         ],
         "overallSatisfaction": "2.1"
     },
     {
-        "responseID": "27185",
-        "projectID": "PROJ-KCID",
-        "clientID": 321,
-        "surveyDate": "2023-06-25",
+        "responseID": "73072",
+        "projectID": "PROJ-BLJH",
+        "clientID": 288,
+        "surveyDate": "2024-09-18",
         "responses": [
             {
                 "questionID": "Q1",
@@ -510,28 +477,94 @@
                 "questionID": "Q2",
                 "questionText": "Please rate the communication from our team.",
                 "responseType": "scale",
-                "responseValue": "3"
+                "responseValue": "1"
             },
             {
                 "questionID": "Q3",
                 "questionText": "What did you like best about working with us?",
                 "responseType": "text",
-                "responseValue": "I think it's great to work with a team, because you can see how they've worked and work with a team and see how they're doing. You can see how they're making decisions now. You can see how they're working now. It's just a lot more fun to"
+                "responseValue": "As you're working with us, it's really fun. You're working with us and we're just so excited. So you're working with us, it's really fun. Your job is really important to us and we're really excited about working with you.\n\nHow did you"
             },
             {
                 "questionID": "Q4",
                 "questionText": "What could we improve on?",
                 "responseType": "text",
-                "responseValue": "The first step was to take the idea and apply it to our own projects. We had already started our own projects and had a full budget for them and the project manager had already developed a prototype in order to help us to develop it.\n\nWe had already created a team of around ten and we were"
+                "responseValue": "Let's look at another example where we can use our data as a starting point for understanding how to improve our own software.\n\nWe will cover a few topics in this article.\n\nThe first is about how to use a data structure to perform a query. We will look at a few of the"
             }
         ],
-        "overallSatisfaction": "3.0"
+        "overallSatisfaction": "3.1"
     },
     {
-        "responseID": "98768",
+        "responseID": "41531",
+        "projectID": "PROJ-BLJH",
+        "clientID": 288,
+        "surveyDate": "2024-09-18",
+        "responses": [
+            {
+                "questionID": "Q1",
+                "questionText": "How satisfied are you with the project outcome?",
+                "responseType": "scale",
+                "responseValue": "2"
+            },
+            {
+                "questionID": "Q2",
+                "questionText": "Please rate the communication from our team.",
+                "responseType": "scale",
+                "responseValue": "1"
+            },
+            {
+                "questionID": "Q3",
+                "questionText": "What did you like best about working with us?",
+                "responseType": "text",
+                "responseValue": "Are there any changes that you'd like to make to the game?\n\nI'd like to do the most important change in the game. There are many ways to play the game. The best way is to play it with a group of players. This is a very new game. I think"
+            },
+            {
+                "questionID": "Q4",
+                "questionText": "What could we improve on?",
+                "responseType": "text",
+                "responseValue": "We all know that people just keep going, growing, and changing. I love what we do with our money, our time, and our passion. How we spend it is up to us, but we need to make sure we're doing what we're doing right.\n\nWhat can we do better for"
+            }
+        ],
+        "overallSatisfaction": "1.4"
+    },
+    {
+        "responseID": "13929",
+        "projectID": "PROJ-BLJH",
+        "clientID": 288,
+        "surveyDate": "2024-09-19",
+        "responses": [
+            {
+                "questionID": "Q1",
+                "questionText": "How satisfied are you with the project outcome?",
+                "responseType": "scale",
+                "responseValue": "2"
+            },
+            {
+                "questionID": "Q2",
+                "questionText": "Please rate the communication from our team.",
+                "responseType": "scale",
+                "responseValue": "5"
+            },
+            {
+                "questionID": "Q3",
+                "questionText": "What did you like best about working with us?",
+                "responseType": "text",
+                "responseValue": "I liked the way we were able to work with the people at the end of each round, and when we got to the end of every round, with each round after each round, we were able to go back and re-evaluate what we were doing and what we should be doing."
+            },
+            {
+                "questionID": "Q4",
+                "questionText": "What could we improve on?",
+                "responseType": "text",
+                "responseValue": "We need to improve the use of our tools and tools. We need to find the right way to use them. We can not only provide the tools, but also the tools for the people who use them.\n\nWe need to create a better community that has an active sense of community. We need to"
+            }
+        ],
+        "overallSatisfaction": "3.8"
+    },
+    {
+        "responseID": "21744",
         "projectID": "PROJ-KCID",
-        "clientID": 321,
-        "surveyDate": "2023-06-26",
+        "clientID": 207,
+        "surveyDate": "2024-09-28",
         "responses": [
             {
                 "questionID": "Q1",
@@ -549,22 +582,220 @@
                 "questionID": "Q3",
                 "questionText": "What did you like best about working with us?",
                 "responseType": "text",
-                "responseValue": "First, he's able to really work with us. He's not a lawyer. He's not a lawyer who can be on the stand, he's a journalist. He's a real big star. He's a real important guy in this business, but he's not a big star"
+                "responseValue": "What do you think we're missing? Please leave in the comments below!\n\n(Visited 11,500 times, 1 visits today)"
             },
             {
                 "questionID": "Q4",
                 "questionText": "What could we improve on?",
                 "responseType": "text",
-                "responseValue": "The answer is simple. We can improve on more of the above and build a better service. However, if at first we think that we're too much of a success in our business, we'll move on.\n\nWe don't have to be a monopoly.\n\nWe can do more."
+                "responseValue": "That's a tough one. We have to be able to get behind the idea of getting to where we need to be.\n\nWhen you're looking at the team, it's hard to keep track of how many games you're at in the next two or three weeks. We're not going to be"
             }
         ],
-        "overallSatisfaction": "1.1"
+        "overallSatisfaction": "2.5"
     },
     {
-        "responseID": "83778",
-        "projectID": "PROJ-PQ85",
-        "clientID": 244,
-        "surveyDate": "2023-08-02",
+        "responseID": "87362",
+        "projectID": "PROJ-KCID",
+        "clientID": 207,
+        "surveyDate": "2024-09-29",
+        "responses": [
+            {
+                "questionID": "Q1",
+                "questionText": "How satisfied are you with the project outcome?",
+                "responseType": "scale",
+                "responseValue": "5"
+            },
+            {
+                "questionID": "Q2",
+                "questionText": "Please rate the communication from our team.",
+                "responseType": "scale",
+                "responseValue": "1"
+            },
+            {
+                "questionID": "Q3",
+                "questionText": "What did you like best about working with us?",
+                "responseType": "text",
+                "responseValue": "Our team is a lot of fun and talented. We're constantly making new features, and making new features that are amazing. Our people are always passionate. They love learning and being around people. They love being with people, and they love being with a group of people. We're always"
+            },
+            {
+                "questionID": "Q4",
+                "questionText": "What could we improve on?",
+                "responseType": "text",
+                "responseValue": "We could make it so you get to sleep at night, or even wake up early. We could make it so people can watch a movie, or even just talk to you. But as you get older, you get bigger and bigger. Well, we have to change that to the point where when we grow up we"
+            }
+        ],
+        "overallSatisfaction": "1.5"
+    },
+    {
+        "responseID": "63656",
+        "projectID": "PROJ-F8MD",
+        "clientID": 195,
+        "surveyDate": "2024-10-04",
+        "responses": [
+            {
+                "questionID": "Q1",
+                "questionText": "How satisfied are you with the project outcome?",
+                "responseType": "scale",
+                "responseValue": "3"
+            },
+            {
+                "questionID": "Q2",
+                "questionText": "Please rate the communication from our team.",
+                "responseType": "scale",
+                "responseValue": "1"
+            },
+            {
+                "questionID": "Q3",
+                "questionText": "What did you like best about working with us?",
+                "responseType": "text",
+                "responseValue": "We have a really good network of friends, many of whom are very important to the team. I think the most important thing is that we are getting things done in an interesting way.\n\nWhat was the biggest challenge you faced working with Jolla?\n\nWorking with Jolla is"
+            },
+            {
+                "questionID": "Q4",
+                "questionText": "What could we improve on?",
+                "responseType": "text",
+                "responseValue": "In most cases, we need to develop a more consistent and holistic approach to creating the desired product. For example, we need to develop a more consistent and holistic approach to designing the product to the customer.\n\nA new and more flexible approach\n\nIn the past, it was common for the design team"
+            }
+        ],
+        "overallSatisfaction": "1.3"
+    },
+    {
+        "responseID": "72783",
+        "projectID": "PROJ-F8MD",
+        "clientID": 195,
+        "surveyDate": "2024-10-06",
+        "responses": [
+            {
+                "questionID": "Q1",
+                "questionText": "How satisfied are you with the project outcome?",
+                "responseType": "scale",
+                "responseValue": "2"
+            },
+            {
+                "questionID": "Q2",
+                "questionText": "Please rate the communication from our team.",
+                "responseType": "scale",
+                "responseValue": "5"
+            },
+            {
+                "questionID": "Q3",
+                "questionText": "What did you like best about working with us?",
+                "responseType": "text",
+                "responseValue": "\"We have a lot of different styles, so we're working with different styles.\"\n\nThe group is also using digital artists to help create songs, along with artists and the media as well as musicians on the team.\n\n\"We want to make music that will reach a wide"
+            },
+            {
+                "questionID": "Q4",
+                "questionText": "What could we improve on?",
+                "responseType": "text",
+                "responseValue": "The answer is to find a way to have a more consistent stream of data, which is what we want to do. We already have a pretty good idea of what's going on in our data. But how do we actually have regular data for things like location, gender, race, age, sexual orientation?"
+            }
+        ],
+        "overallSatisfaction": "4.7"
+    },
+    {
+        "responseID": "72578",
+        "projectID": "PROJ-F8MD",
+        "clientID": 195,
+        "surveyDate": "2024-10-09",
+        "responses": [
+            {
+                "questionID": "Q1",
+                "questionText": "How satisfied are you with the project outcome?",
+                "responseType": "scale",
+                "responseValue": "4"
+            },
+            {
+                "questionID": "Q2",
+                "questionText": "Please rate the communication from our team.",
+                "responseType": "scale",
+                "responseValue": "1"
+            },
+            {
+                "questionID": "Q3",
+                "questionText": "What did you like best about working with us?",
+                "responseType": "text",
+                "responseValue": "Travis: Being able to communicate with other people about what we're doing and what we are going to do is very important. It gives you the chance to understand what we're doing and what we're going to do.\n\nI think it's also kind of exciting to be able"
+            },
+            {
+                "questionID": "Q4",
+                "questionText": "What could we improve on?",
+                "responseType": "text",
+                "responseValue": "We could make it work better for you.\n\nWe can't.\n\nWe're not in the business of making it work better for you. Instead, we're in the business of making it work better for us.\n\nDo not listen to people who argue that it's just a business decision. It"
+            }
+        ],
+        "overallSatisfaction": "2.6"
+    },
+    {
+        "responseID": "31390",
+        "projectID": "PROJ-5KXV",
+        "clientID": 111,
+        "surveyDate": "2024-10-10",
+        "responses": [
+            {
+                "questionID": "Q1",
+                "questionText": "How satisfied are you with the project outcome?",
+                "responseType": "scale",
+                "responseValue": "5"
+            },
+            {
+                "questionID": "Q2",
+                "questionText": "Please rate the communication from our team.",
+                "responseType": "scale",
+                "responseValue": "5"
+            },
+            {
+                "questionID": "Q3",
+                "questionText": "What did you like best about working with us?",
+                "responseType": "text",
+                "responseValue": "The best thing about working with us is that we are all professionals and we have many different perspectives and we all love working with the same people. We have great relationships and relationships with people all over the world.\n\nWhat was the hardest thing about working with us?\n\nThe hardest"
+            },
+            {
+                "questionID": "Q4",
+                "questionText": "What could we improve on?",
+                "responseType": "text",
+                "responseValue": "Why would we need all these technologies? Why should we not be able to make one more effort to create a better product? Why would we not consider the following:\n\n1. We are making a new product\n\n2. We are making a new product\n\n3. We are making a new"
+            }
+        ],
+        "overallSatisfaction": "5.0"
+    },
+    {
+        "responseID": "46772",
+        "projectID": "PROJ-5KXV",
+        "clientID": 111,
+        "surveyDate": "2024-10-14",
+        "responses": [
+            {
+                "questionID": "Q1",
+                "questionText": "How satisfied are you with the project outcome?",
+                "responseType": "scale",
+                "responseValue": "2"
+            },
+            {
+                "questionID": "Q2",
+                "questionText": "Please rate the communication from our team.",
+                "responseType": "scale",
+                "responseValue": "5"
+            },
+            {
+                "questionID": "Q3",
+                "questionText": "What did you like best about working with us?",
+                "responseType": "text",
+                "responseValue": "\"I would say it was very well done, and we really appreciate the way our people feel about us.\"\n\nWhat was your biggest challenge in starting work on the game?\n\n\"The first game I played was a very good one and it was very well done, but it"
+            },
+            {
+                "questionID": "Q4",
+                "questionText": "What could we improve on?",
+                "responseType": "text",
+                "responseValue": "Well, it's pretty simple. We've got a lot of tools. We've got a lot of tools, we're going to build new tools all over again.\n\nSo, if someone comes up with a new tool that's going to make a difference, and they try to use it on a different aspect"
+            }
+        ],
+        "overallSatisfaction": "2.2"
+    },
+    {
+        "responseID": "11720",
+        "projectID": "PROJ-O6QJ",
+        "clientID": 91,
+        "surveyDate": "2024-10-20",
         "responses": [
             {
                 "questionID": "Q1",
@@ -582,28 +813,28 @@
                 "questionID": "Q3",
                 "questionText": "What did you like best about working with us?",
                 "responseType": "text",
-                "responseValue": "[Laughs.]\n\nWhen you first heard about the project, you had to see it on the air. But you also knew that the show was going to be something special. You had heard that the show would be on the air for two years and that you were going to have to"
+                "responseValue": "\"We've got a lot of fun and we've got to be creative with what we do. We've got a lot of fun with what we do, and we've got to be creative with what we do.\"\n\nWhat do you like best about working with us?"
             },
             {
                 "questionID": "Q4",
                 "questionText": "What could we improve on?",
                 "responseType": "text",
-                "responseValue": "Well, we could change the way the game is played or the way we play it.\n\n\"We're not going to be able to change the way you're playing, but we're going to keep improving. That's the key.\n\n\"If we can do it, we can do it, and"
+                "responseValue": "I think we can.\n\nIt's been a long time since I've had a chance to play a \"big\" game. I've only played a minimum of five games this season, my best performance was last year's 2-2 draw with New York (at which time I was in my third"
             }
         ],
-        "overallSatisfaction": "4.0"
+        "overallSatisfaction": "4.1"
     },
     {
-        "responseID": "41168",
-        "projectID": "PROJ-PQ85",
-        "clientID": 244,
-        "surveyDate": "2023-08-02",
+        "responseID": "82097",
+        "projectID": "PROJ-O6QJ",
+        "clientID": 91,
+        "surveyDate": "2024-10-21",
         "responses": [
             {
                 "questionID": "Q1",
                 "questionText": "How satisfied are you with the project outcome?",
                 "responseType": "scale",
-                "responseValue": "4"
+                "responseValue": "2"
             },
             {
                 "questionID": "Q2",
@@ -615,114 +846,15 @@
                 "questionID": "Q3",
                 "questionText": "What did you like best about working with us?",
                 "responseType": "text",
-                "responseValue": "Advertisement\n\nI always loved the fact that I could actually get away with anything. In fact, the more I looked into it, the more I began to realize that it was just me. I wasn't like myself, and I didn't think that people were going to say something like"
+                "responseValue": "We've really been working very hard to get this project going. I think it's a nice project and a real way to make money with the game. We've been super hard at it and we're really happy to help.\n\nWhat's your biggest challenge right now?"
             },
             {
                 "questionID": "Q4",
                 "questionText": "What could we improve on?",
                 "responseType": "text",
-                "responseValue": "Now that we have a better model, we can use the model to develop more effective methods for the development of our game.\n\nNow we have a model that can help us build game systems over a long period of time.\n\nWhat does the current model look like?\n\nAs you could guess"
+                "responseValue": "It's not just that we have a good mix of technologies. The big question with all of these and so on is whether we should invest in new technologies.\n\nI think this is a very important issue. I think we have a lot of potential.\n\nBut I also think that what is important"
             }
         ],
-        "overallSatisfaction": "3.2"
-    },
-    {
-        "responseID": "99414",
-        "projectID": "PROJ-PQ85",
-        "clientID": 244,
-        "surveyDate": "2023-08-04",
-        "responses": [
-            {
-                "questionID": "Q1",
-                "questionText": "How satisfied are you with the project outcome?",
-                "responseType": "scale",
-                "responseValue": "4"
-            },
-            {
-                "questionID": "Q2",
-                "questionText": "Please rate the communication from our team.",
-                "responseType": "scale",
-                "responseValue": "4"
-            },
-            {
-                "questionID": "Q3",
-                "questionText": "What did you like best about working with us?",
-                "responseType": "text",
-                "responseValue": "Kirby: We had a lot of fun working with her. She was very kind, very intelligent, very caring, but we also got to work with her as a co-worker. She really had a lot of confidence in her, and in her creative vision.\n\nTell"
-            },
-            {
-                "questionID": "Q4",
-                "questionText": "What could we improve on?",
-                "responseType": "text",
-                "responseValue": "We should try to see if we can make a few tweaks to make it more intuitive.\n\nThe first thing here is that we have to say that we have changed the way in which we define and declare variables. We may now define the following functions:\n\nfunction foo(x) { return x"
-            }
-        ],
-        "overallSatisfaction": "4.0"
-    },
-    {
-        "responseID": "76335",
-        "projectID": "PROJ-O6QJ",
-        "clientID": 300,
-        "surveyDate": "2023-10-16",
-        "responses": [
-            {
-                "questionID": "Q1",
-                "questionText": "How satisfied are you with the project outcome?",
-                "responseType": "scale",
-                "responseValue": "5"
-            },
-            {
-                "questionID": "Q2",
-                "questionText": "Please rate the communication from our team.",
-                "responseType": "scale",
-                "responseValue": "2"
-            },
-            {
-                "questionID": "Q3",
-                "questionText": "What did you like best about working with us?",
-                "responseType": "text",
-                "responseValue": "We're still trying to get to the point where we're going to be able to make the most of our time. I think it's better if we can make sure we're doing something that's relevant to our business.\n\nDid you like the way we approached your website?"
-            },
-            {
-                "questionID": "Q4",
-                "questionText": "What could we improve on?",
-                "responseType": "text",
-                "responseValue": "This is a very important issue.\n\nIf we can prevent the flow of information from the internet to an individual, we can prevent the flow of information from others.\n\nIn the future, we will need to change that.\n\nWe use technology to make sure that we are able to control our"
-            }
-        ],
-        "overallSatisfaction": "2.6"
-    },
-    {
-        "responseID": "67189",
-        "projectID": "PROJ-O6QJ",
-        "clientID": 300,
-        "surveyDate": "2023-10-16",
-        "responses": [
-            {
-                "questionID": "Q1",
-                "questionText": "How satisfied are you with the project outcome?",
-                "responseType": "scale",
-                "responseValue": "4"
-            },
-            {
-                "questionID": "Q2",
-                "questionText": "Please rate the communication from our team.",
-                "responseType": "scale",
-                "responseValue": "2"
-            },
-            {
-                "questionID": "Q3",
-                "questionText": "What did you like best about working with us?",
-                "responseType": "text",
-                "responseValue": "What do you want to see in the future? And what are your thoughts on the future of the film? What are your thoughts on the future of the film?\n\nB: We're very excited about our upcoming season of The Expanse. We are excited and excited about this show, and"
-            },
-            {
-                "questionID": "Q4",
-                "questionText": "What could we improve on?",
-                "responseType": "text",
-                "responseValue": "1. Introduce a new way to create tokens.\n\n2. Create a new way to create tokens.\n\n3. Create a new way to create tokens.\n\n4. Create a new way to create tokens.\n\n5. Create a new way to create tokens.\n\n6"
-            }
-        ],
-        "overallSatisfaction": "2.9"
+        "overallSatisfaction": "2.2"
     }
 ]

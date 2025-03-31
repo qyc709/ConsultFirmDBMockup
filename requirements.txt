@@ -31,6 +31,7 @@ openpyxl
 snowflake-connector-python
 snowflake-connector-python[pandas]
 pandas
+pandas-gbq
 
 # Environment
 python-dotenv
@@ -55,3 +56,4 @@ ujson
 
 # Google Cloud API
 google-cloud-storage
+google-cloud-bigquery

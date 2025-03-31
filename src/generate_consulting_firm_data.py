@@ -8,6 +8,8 @@ import string
 import json
 from json_generator.client_feedback import generate_client_feedback 
 from upload_to_gcp.upload_files_to_bucket import upload_files_to_buckets
+from upload_to_gcp.upload_db_to_bq import upload_sqlite_to_bigquery
+
 
 MONTHS_OF_A_YEAR = 12
 TABLE_NAMES = ["Location", "Client", "BusinessUnit", "Project", "Deliverable", "Consultant", "Title", "ConsultantTitleHistory", "ConsultantDeliverable", "ProjectExpense", "ProjectTeam", "Payroll", "ProjectBillingRate"]
@@ -287,7 +289,7 @@ def generate_consulting_firm_data(start_year, initial_no_of_months, no_of_update
     # ensure the data is enough to be separated in the given time intervals
     end_year = start_year + (initial_no_of_months + no_of_updates*intervals)//MONTHS_OF_A_YEAR
 
-    # generate the source data
+    # # generate the source data
     generate_initial_source_data(start_year, end_year)
 
     current_dir = os.getcwd()
@@ -314,7 +316,7 @@ def generate_consulting_firm_data(start_year, initial_no_of_months, no_of_update
 
     # Generate json file
     generate_client_feedback()
-    print("JSON生成结束")
+    print("✅ JSON Generation Completed")
 
     for i in range(no_of_updates):
         if i == 0:
@@ -329,7 +331,14 @@ def generate_consulting_firm_data(start_year, initial_no_of_months, no_of_update
 
         generate_json_version(date, version, output_path)
 
-    # upload_files_to_buckets()
+    upload_files_to_buckets()
+
+    upload=True
+    version_to_upload="initial"
+
+    if upload and version_to_upload:
+        db_dir = f"{output_path}/versions/database"
+        upload_sqlite_to_bigquery(version_to_upload, db_dir)
 
     
 
